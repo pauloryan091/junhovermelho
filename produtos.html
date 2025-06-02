@@ -232,89 +232,84 @@
             background-color: #b71c1c;
         }
         /* Rodapé */
-footer {
-    background-color: #d32f2f;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-.produtos {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
+        footer {
+            background-color: #d32f2f;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .produtos {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
 
-.produto {
-    text-align: center;
-}
+        .produto {
+            text-align: center;
+        }
 
-.produto img {
-    max-width: 100%;
-    height: auto;
-}
+        .produto img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%; /* Novo estilo aplicado */
+        }
 
-.produto img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%; /* Novo estilo aplicado */
-}
+        main img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 50%; /* Adicionado para deixar a imagem com cantos arredondados */
+        }
 
-main img {
-    max-width: 100%;
-    height: auto;
-    margin: 20px 0;
-    border-radius: 50%; /* Adicionado para deixar a imagem com cantos arredondados */
-}
+        .btn-vermelho {
+            text-decoration: none;
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
 
-.btn-vermelho {
-    text-decoration: none;
-    background-color: #d32f2f;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+        .btn-vermelho:hover {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-decoration: none;
+            background-color: #b71c1c;
+        }
 
-.btn-vermelho:hover {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-decoration: none;
-    background-color: #b71c1c;
-}
+        .form-cadastro {
+            max-width: 500px;
+            margin: 20px auto;
+            text-align: left;
+            background-color: #ffeaea;
+            padding: 20px;
+            border-radius: 10px;
+        }
 
-.form-cadastro {
-    max-width: 500px;
-    margin: 20px auto;
-    text-align: left;
-    background-color: #ffeaea;
-    padding: 20px;
-    border-radius: 10px;
-}
+        .form-cadastro input,
+        .form-cadastro textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: inherit;
+        }
 
-.form-cadastro input,
-.form-cadastro textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: inherit;
-}
+        .form-cadastro label {
+            font-weight: bold;
+            color: #b71c1c;
+        }
 
-.form-cadastro label {
-    font-weight: bold;
-    color: #b71c1c;
-}
-
-.form-cadastro button {
-    margin-top: 10px;
-}
+        .form-cadastro button {
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -336,97 +331,23 @@ main img {
             <div class="produto">
                 <img src="OIP.jpg" alt="Camiseta 1">
                 <p>Preço: R$ 49,90</p>
-                <button class="btn-vermelho" onclick="openModal('Camiseta Junho Vermelho 1', 'OIP.jpg', 'R$ 49,90', 'Camiseta de alta qualidade com estampa relacionada à campanha Junho Vermelho, tecido confortável e ótimo caimento. Perfeita para mostrar seu apoio de forma estilosa.')">Finalizar Compra</button>
+                <button class="btn-vermelho">Finalizar Compra</button>
             </div>
             <div class="produto">
                 <img src="D_NQ_NP_705614-MLB74252083446_022024-O.webp" alt="Camiseta 2">
                 <p>Preço: R$ 49,90</p>
-                <button class="btn-vermelho" onclick="openModal('Camiseta Junho Vermelho 2', 'D_NQ_NP_705614-MLB74252083446_022024-O.webp', 'R$ 49,90', 'Camiseta com tecido leve e durável, perfeita para o dia a dia. Design exclusivo Junho Vermelho, que ajuda a conscientizar sobre a importância da doação de sangue.')">Finalizar Compra</button>
+                <button class="btn-vermelho">Finalizar Compra</button>
             </div>
             <div class="produto">
                 <img src="D_NQ_NP_840476-MLB72112672143_102023-O.webp" alt="Camiseta 3">
                 <p>Preço: R$ 49,90</p>
-                <button class="btn-vermelho" onclick="openModal('Camiseta Junho Vermelho 3', 'D_NQ_NP_840476-MLB72112672143_102023-O.webp', 'R$ 49,90', 'Confeccionada com algodão 100%, esta camiseta oferece conforto máximo. Estampa vibrante que destaca seu compromisso com a campanha Junho Vermelho.')">Finalizar Compra</button>
+                <button class="btn-vermelho">Finalizar Compra</button>
             </div>
         </div>
     </main>
 
-    <!-- Modal -->
-    <div id="productModal" class="modal">
-        <div class="modal-content">
-            <span class="close" title="Fechar modal">&times;</span>
-            <h2 id="modalProductName"></h2>
-            <img id="modalProductImage" src="" alt="" style="max-width: 100%; border-radius: 10px;"/>
-            <p id="modalProductPrice"></p>
-            <p id="modalProductDescription"></p>
-            <button class="btn-vermelho" onclick="openPurchaseForm()">Entrar em Contato</button>
-        </div>
-    </div>
-
-    <!-- Formulário de Finalização de Compra -->
-    <div id="purchaseModal" class="modal">
-        <div class="modal-content">
-            <span class="close" title="Fechar modal">&times;</span>
-            <h2>Finalizar Compra</h2>
-            <form class="form-cadastro" action="#" method="post">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="4"></textarea>
-
-                <button type="submit" class="btn-vermelho">Enviar</button>
-            </form>
-        </div>
-    </div>
-
     <footer>
         <p>Desenvolvimento de Sistemas UC7-2025</p>
     </footer>
-
-    <script>
-        // Obter os modais
-        var productModal = document.getElementById("productModal");
-        var purchaseModal = document.getElementById("purchaseModal");
-
-        // Obter o elemento <span> que fecha os modais
-        var closeButtons = document.getElementsByClassName("close");
-
-        // Função para abrir o modal do produto
-        function openModal(name, image, price, description) {
-            document.getElementById("modalProductName").innerText = name;
-            document.getElementById("modalProductImage").src = image;
-            document.getElementById("modalProductImage").alt = name;
-            document.getElementById("modalProductPrice").innerText = price;
-            document.getElementById("modalProductDescription").innerText = description;
-            productModal.style.display = "block";
-        }
-
-        // Função para abrir o modal de finalização de compra
-        function openPurchaseForm() {
-            productModal.style.display = "none"; // Fecha o modal do produto
-            purchaseModal.style.display = "block"; // Abre o modal de compra
-        }
-
-        // Quando o usuário clicar no <span> (x), fecha os modais
-        for (let i = 0; i < closeButtons.length; i++) {
-            closeButtons[i].onclick = function() {
-                productModal.style.display = "none";
-                purchaseModal.style.display = "none";
-            }
-        }
-
-        // Quando o usuário clicar em qualquer lugar fora do modal, fecha-o
-        window.onclick = function(event) {
-            if (event.target == productModal) {
-                productModal.style.display = "none";
-            } else if (event.target == purchaseModal) {
-                purchaseModal.style.display = "none";
-            }
-        }
-    </script>
 </body>
 </html>
