@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Detalhes das Camisetas - Junho Vermelho</title>
+<style>
+     * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff5f5;
+            color: #333;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #d32f2f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+    nav {
+        background-color: #b71c1c;
+        padding: 10px 0;
+    }
+    .menu {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+    .menu li {
+        margin: 0 15px;
+    }
+    .menu a {
+        color: white;
+        text-decoration: none;
+        padding: 8px 16px;
+        transition: background-color 0.3s;
+        border-radius: 4px;
+        font-weight: bold;
+    }
+    .menu a:hover {
+        background-color: #880e4f;
+    }
+    main {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 0 20px 40px 20px;
+    }
+    h1 {
+        color: #d32f2f;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .camiseta {
+        background-color: #ffeaea;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        padding: 20px;
+        margin-bottom: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px;
+    }
+    .camiseta img {
+        flex: 1 1 250px;
+        max-width: 250px;
+        border-radius: 10px;
+        height: auto;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .detalhes {
+        flex: 2 1 400px;
+        font-size: 1.1rem;
+        color: #333;
+    }
+    .detalhes h2 {
+        color: #d32f2f;
+        margin-bottom: 12px;
+    }
+    .detalhes p {
+        margin-bottom: 12px;
+        line-height: 1.5;
+    }
+    .btn-vermelho {
+        display: inline-block;
+        background-color: #d32f2f;
+        color: white;
+        padding: 12px 24px;
+        font-size: 16px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        border-radius: 8px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border: none;
+        margin-top: 10px;
+    }
+    .btn-vermelho:hover {
+        background-color: #b71c1c;
+    }
+    footer {
+        background-color: #d32f2f;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 60px;
+        font-size: 14px;
+    }
+    @media (max-width: 700px) {
+        .camiseta {
+            flex-direction: column;
+            align-items: center;
+        }
+        .detalhes {
+            flex: none;
+            width: 100%;
+        }
+        .camiseta img {
+            max-width: 100%;
+        }
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1>Junho Vermelho - Detalhes das Camisetas</h1>
+</header>
+<nav>
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="contato.html">Contato</a></li>
+    </ul>
+</nav>
+<main>
+    <section class="camiseta" id="camiseta1">
+        <img src="OIP.jpg" alt="Camiseta 1" />
+        <div class="detalhes">
+            <h2>Camiseta doe sangue</h2>
+            <p><strong>Preço:</strong> R$ 49,90</p>
+            <p><strong>Material:</strong> Algodão 100%, tecido leve e respirável.</p>
+            <p><strong>Descrição:</strong> Camiseta confortável e estilosa, perfeita para o dia a dia, com a temática Junho Vermelho que valoriza a doação de sangue.</p>
+            <p><strong>Tamanhos disponíveis:</strong> P, M, G, GG</p>
+            
+        </div>
+    </section>
+    <section class="camiseta" id="camiseta2">
+        <img src="D_NQ_NP_705614-MLB74252083446_022024-O.webp" alt="Camiseta 2" />
+        <div class="detalhes">
+            <h2>Camiseta doe vida 2</h2>
+            <p><strong>Preço:</strong> R$ 49,90</p>
+            <p><strong>Material:</strong> Mistura de algodão e poliéster que garante durabilidade e conforto.</p>
+            <p><strong>Descrição:</strong> Design moderno com cores vibrantes que destacam a campanha Junho Vermelho.</p>
+            <p><strong>Tamanhos disponíveis:</strong> P, M, G, GG, XGG</p>
+            
+        </div>
+    </section>
+    <section class="camiseta" id="camiseta3">
+        <img src="D_NQ_NP_840476-MLB72112672143_102023-O.webp" alt="Camiseta 3" />
+        <div class="detalhes">
+            <h2>Camiseta doe vida</h2>
+            <p><strong>Preço:</strong> R$ 49,90</p>
+            <p><strong>Material:</strong> 100% Algodão orgânico, sustentável e macio.</p>
+            <p><strong>Descrição:</strong> Camiseta ecológica com estampa exclusiva da campanha Junho Vermelho, contribuindo para o meio ambiente.</p>
+            <p><strong>Tamanhos disponíveis:</strong> P, M, G, GG</p>
+       
+        </div>
+    </section>
+</main>
+<footer>
+    <p>Desenvolvimento de Sistemas UC7-2025</p>
+</footer>
+</body>
+</html>
+
