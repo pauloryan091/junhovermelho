@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Produtos - Junho Vermelho</title>
     <style>
         /* Estilo global */
@@ -88,6 +88,9 @@
             text-align: center;
             width: 250px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .produto:hover {
@@ -105,11 +108,39 @@
         .produto p {
             font-size: 1.1rem;
             color: #333;
-            margin: 10px 0;
+            margin: 10px 0 15px 0;
+        }
+
+        details {
+            width: 100%;
+            text-align: left;
+            font-size: 1rem;
+            margin-top: 10px;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #d32f2f;
+            list-style: none;
+            outline: none;
+        }
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        summary::before {
+            content: "▶ ";
+            display: inline-block;
+            transition: transform 0.2s ease;
+        }
+        details[open] summary::before {
+            transform: rotate(90deg);
         }
 
         .btn-vermelho {
-            text-decoration: none;
+            margin-top: 15px;
             background-color: #d32f2f;
             color: white;
             border: none;
@@ -119,118 +150,15 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .btn-vermelho:hover {
             background-color: #b71c1c;
-        }
-
-        /* Estilo do Modal */
-        .modal {
-            display: none; /* Escondido por padrão */
-            position: fixed; /* Fixo na tela */
-            z-index: 1; /* Fica em cima */
-            left: 0;
-            top: 0;
-            width: 100%; /* Largura total */
-            height: 100%; /* Altura total */
-            overflow: auto; /* Habilita rolagem se necessário */
-            background-color: rgba(0, 0, 0, 0.4); /* Fundo preto com opacidade */
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto; /* Margem para centralizar */
-            padding: 20px;
-            border: 1px solid #888;
-            width: 90%;
-            max-width: 500px; /* max largura */
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            position: relative;
-        }
-
-        .close {
-            color: #aaa;
-            position: absolute;
-            right: 15px;
-            top: 10px;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: black;
             text-decoration: none;
         }
 
-        #modalProductName {
-            margin-bottom: 15px;
-            color: #d32f2f;
-            font-weight: bold;
-            font-size: 1.8rem;
-        }
-
-        #modalProductPrice {
-            font-size: 1.2rem;
-            color: #b71c1c;
-            margin: 10px 0;
-        }
-
-        #modalProductDescription {
-            font-size: 1rem;
-            color: #333;
-            margin: 15px 0 25px 0;
-        }
-
-        /* Estilo do Formulário de Finalização de Compra */
-        .form-cadastro {
-            max-width: 500px;
-            margin: 20px auto;
-            text-align: left;
-            background-color: #ffeaea;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-cadastro label {
-            font-weight: bold;
-            color: #b71c1c;
-        }
-
-        .form-cadastro input,
-        .form-cadastro textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-family: inherit;
-        }
-
-        .form-cadastro button {
-            margin-top: 10px;
-        }
-
-        .form-cadastro button.btn-vermelho {
-            width: 100%;
-            background-color: #d32f2f;
-            color: white;
-            border: none;
-            padding: 10px;
-            font-size: 16px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .form-cadastro button.btn-vermelho:hover {
-            background-color: #b71c1c;
-        }
         /* Rodapé */
         footer {
             background-color: #d32f2f;
@@ -240,75 +168,7 @@
             position: relative;
             bottom: 0;
             width: 100%;
-        }
-        .produtos {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-
-        .produto {
-            text-align: center;
-        }
-
-        .produto img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 50%; /* Novo estilo aplicado */
-        }
-
-        main img {
-            max-width: 100%;
-            height: auto;
-            margin: 20px 0;
-            border-radius: 50%; /* Adicionado para deixar a imagem com cantos arredondados */
-        }
-
-        .btn-vermelho {
-            text-decoration: none;
-            background-color: #d32f2f;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-
-        .btn-vermelho:hover {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            text-decoration: none;
-            background-color: #b71c1c;
-        }
-
-        .form-cadastro {
-            max-width: 500px;
-            margin: 20px auto;
-            text-align: left;
-            background-color: #ffeaea;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        .form-cadastro input,
-        .form-cadastro textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-family: inherit;
-        }
-
-        .form-cadastro label {
-            font-weight: bold;
-            color: #b71c1c;
-        }
-
-        .form-cadastro button {
-            margin-top: 10px;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -326,30 +186,44 @@
         </ul>
     </nav>
  
-<main>
-    <h2>Camisetas</h2>
-    <div class="produtos">
-        <div class="produto">
-            <img src="OIP.jpg" alt="Camiseta 1">
-            <p>Preço: R$ 49,90</p>
-            <a href="contato.html" class="btn-vermelho">Saiba Mais</a>
-        </div>
-        <div class="produto">
-            <img src="D_NQ_NP_705614-MLB74252083446_022024-O.webp" alt="Camiseta 2">
-            <p>Preço: R$ 49,90</p>
-            <a href="contato.html" class="btn-vermelho">Saiba Mais</a>
-        </div>
-        <div class="produto">
-            <img src="D_NQ_NP_840476-MLB72112672143_102023-O.webp" alt="Camiseta 3">
-            <p>Preço: R$ 49,90</p>
-            <a href="contato.html" class="btn-vermelho">Saiba Mais</a>
-        </div>
-    </div>
-</main>
+    <main>
+        <h2>Camisetas</h2>
+        <div class="produtos">
+            <div class="produto">
+                <img src="OIP.jpg" alt="Camiseta 1" />
+                <p>Preço: R$ 49,90</p>
+                <details>
+                    <summary>Detalhes</summary>
+                    <p>camiseta doe sangue, com tamanhos para todos e malha fria</p>
+                    <a href="detalhes.html" class="btn-vermelho" role="button">Saiba</a>
+                </details>
+            </div>
 
+            <div class="produto">
+                <img src="D_NQ_NP_705614-MLB74252083446_022024-O.webp" alt="Camiseta 2" />
+                <p>Preço: R$ 49,90</p>
+                <details>
+                    <summary>Detalhes</summary>
+                    <p>doe vida, camiseta que veio da china, sem covid-19</p>
+                    <a href="detalhes.html" class="btn-vermelho" role="button">Saiba</a>
+                </details>
+            </div>
+
+            <div class="produto">
+                <img src="D_NQ_NP_840476-MLB72112672143_102023-O.webp" alt="Camiseta 3" />
+                <p>Preço: R$ 49,90</p>
+                <details>
+                    <summary>Detalhes</summary>
+                    <p>doe sangue, camiseta feita com malha que veio da europa</p>
+                    <a href="detalhes.html" class="btn-vermelho" role="button">Saiba</a>
+                </details>
+            </div>
+        </div>
+    </main>
 
     <footer>
         <p>Desenvolvimento de Sistemas UC7-2025</p>
     </footer>
 </body>
 </html>
+
