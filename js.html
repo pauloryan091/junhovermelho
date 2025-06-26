@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sem Nome No Momento</title>
+  <link rel="stylesheet" href="css.css">
+  
+</head>
+<body>
+
+  <main>
+    <h3>Envie Seu Formulariozinho agoraaa!</h3>
+    <form class="form-cadastro" action="#" method="post">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="contato">Contato:</label>
+      <input type="text" id="contato" name="contato" required>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea name="mensagem" id="mensagem"></textarea>
+
+
+      <button type="submit" class="btn" onclick="return confirmarEnvio()">Enviar</button>
+      <button type="reset" class="btn" onclick="mostrarLimpo()">Limpar</button>
+    </form>
+
+ 
+    
+  </main>
+
+  <script>
+    function confirmarEnvio() {
+      return confirm("Vc quer enviar seu Formulariozinho?");
+    }
+
+    function mostrarLimpo() {
+      alert("Vc quer limpar seu formulariozinho.");
+    }
+
+  
+  </script>
+</body>
+</html>

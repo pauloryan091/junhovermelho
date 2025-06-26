@@ -1,70 +1,213 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos - Junho Vermelho</title>
     <style>
-        /* Estilo global */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+    /* Estilo global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff5f5;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #d32f2f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Menu de navegação */
+nav {
+    background-color: #b71c1c;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #880e4f;
+}
+
+/* Conteúdo principal */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+/* Rodapé */
+footer {
+    background-color: #d32f2f;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.produtos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.produto {
+    text-align: center;
+}
+
+.produto img {
+    max-width: 100%;
+    height: auto;
+}
+
+.produto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%; /* Novo estilo aplicado */
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 50%; /* Adicionado para deixar a imagem com cantos arredondados */
+}
+
+.btn-vermelho {
+    text-decoration: none;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn-vermelho:hover {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    background-color: #b71c1c;
+}
+
+.form-cadastro {
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: left;
+    background-color: #ffeaea;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-cadastro input,
+.form-cadastro textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.form-cadastro label {
+    font-weight: bold;
+    color: #b71c1c;
+}
+
+.form-cadastro button {
+    margin-top: 10px;
+}
+/* Serviços */
+        main h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #d32f2f;
+            margin-bottom: 20px;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fff5f5;
+        .description {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .service-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #d32f2f;
+            margin-bottom: 10px;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #b71c1c;
+            margin-bottom: 10px;
+        }
+
+        .service-description {
+            font-size: 1rem;
             color: #333;
         }
 
-        /* Cabeçalho */
-        header {
-            background-color: #d32f2f;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        /* Menu de navegação */
-        nav {
-            background-color: #b71c1c;
-        }
-
-        .menu {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 10px 0;
-        }
-
-        .menu li {
-            margin: 0 15px;
-        }
-
-        .menu a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            transition: background-color 0.3s;
-        }
-
-        .menu a:hover {
-            background-color: #880e4f;
-        }
-
-        .menu a[aria-current="page"] {
-            background-color: #880e4f;
-            border-radius: 4px;
-        }
-
-        /* Conteúdo principal */
-        main {
-            padding: 20px;
-            text-align: center;
-        }
-
-        main h2 {
+           main h2 {
             font-size: 2rem;
             font-weight: bold;
             color: #d32f2f;
@@ -88,9 +231,6 @@
             text-align: center;
             width: 250px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
 
         .produto:hover {
@@ -108,39 +248,11 @@
         .produto p {
             font-size: 1.1rem;
             color: #333;
-            margin: 10px 0 15px 0;
-        }
-
-        details {
-            width: 100%;
-            text-align: left;
-            font-size: 1rem;
-            margin-top: 10px;
-            border-top: 1px solid #ddd;
-            padding-top: 10px;
-        }
-
-        summary {
-            cursor: pointer;
-            font-weight: bold;
-            color: #d32f2f;
-            list-style: none;
-            outline: none;
-        }
-        summary::-webkit-details-marker {
-            display: none;
-        }
-        summary::before {
-            content: "▶ ";
-            display: inline-block;
-            transition: transform 0.2s ease;
-        }
-        details[open] summary::before {
-            transform: rotate(90deg);
+            margin: 10px 0;
         }
 
         .btn-vermelho {
-            margin-top: 15px;
+            text-decoration: none;
             background-color: #d32f2f;
             color: white;
             border: none;
@@ -150,30 +262,191 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            text-decoration: none;
-            display: inline-block;
         }
 
         .btn-vermelho:hover {
             background-color: #b71c1c;
-            text-decoration: none;
         }
 
-        /* Rodapé */
-        footer {
+        /* Sobre */
+        main h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #d32f2f;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        main img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .description {
+            font-size: 1.1rem;
+            color: #333;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .goals {
+            background-color: #ffeaea;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .goals h3 {
+            color: #b71c1c;
+            margin-bottom: 10px;
+        }
+
+        .goals ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            color: #333;
+        }
+         /* Home */
+        main h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #d32f2f;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        main img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .welcome-message {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        .benefits {
+            background-color: #ffeaea;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .benefits h3 {
+            color: #b71c1c;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .benefits p {
+            font-size: 1rem;
+            color: #333;
+            margin: 10px 0;
+            text-align: left;
+        }
+
+        /* Contato */
+        main h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #d32f2f;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        main img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-cadastro {
+            max-width: 500px;
+            margin: 20px auto;
+            text-align: left;
+            background-color: #ffeaea;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-cadastro label {
+            font-weight: bold;
+            color: #b71c1c;
+        }
+
+        .form-cadastro input,
+        .form-cadastro textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+
+        .form-cadastro button {
+            margin-top: 10px;
+        }
+
+        .form-cadastro button.btn-vermelho {
+            width: 100%;
             background-color: #d32f2f;
             color: white;
-            text-align: center;
+            border: none;
             padding: 10px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            margin-top: 40px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
-    </style>
+
+        .form-cadastro button.btn-vermelho:hover {
+            background-color: #b71c1c;
+        }
+            body {
+      background-color: white;
+      color: black;
+      transition: 0.3s;
+    }
+
+    .darkmode {
+      background-color: #121212;
+      color: white;
+    }
+
+    #toogglebtn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: white;
+      cursor: pointer;
+    }
+</style>
+ 
 </head>
 <body>
     <header>
+          <button id="toogglebtn">apaga &lt;3</button>
         <h1>Junho Vermelho</h1>
     </header>
     <nav>
@@ -185,45 +458,35 @@
             <li><a href="contato.html">Contato</a></li>
         </ul>
     </nav>
- 
     <main>
         <h2>Camisetas</h2>
         <div class="produtos">
             <div class="produto">
-                <img src="OIP.jpg" alt="Camiseta 1" />
+                <img src="OIP.jpg" alt="Camiseta 1">
                 <p>Preço: R$ 49,90</p>
-                <details>
-                    <summary>Detalhes</summary>
-                    <p>camiseta doe sangue, com tamanhos para todos e malha fria</p>
-                    <a href="detalhes.html" class="btn-vermelho" role="button">Saiba</a>
-                </details>
+                <button class="btn-vermelho">
+                    <a href="contato.html" style="color: white; text-decoration: none;">Comprar</a>
+                </button>
             </div>
-
             <div class="produto">
-                <img src="D_NQ_NP_705614-MLB74252083446_022024-O.webp" alt="Camiseta 2" />
+                <img src="D_NQ_NP_705614-MLB74252083446_022024-O.webp" alt="Camiseta 2">
                 <p>Preço: R$ 49,90</p>
-                <details>
-                    <summary>Detalhes</summary>
-                    <p>doe vida, camiseta que veio da china, sem covid-19</p>
-                    <a href="detalhes.html" class="btn-vermelho" role="button">Saiba</a>
-                </details>
+                <button class="btn-vermelho">
+                    <a href="contato.html" style="color: white; text-decoration: none;">Comprar</a>
+                </button>
             </div>
-
             <div class="produto">
-                <img src="D_NQ_NP_840476-MLB72112672143_102023-O.webp" alt="Camiseta 3" />
+                <img src="D_NQ_NP_840476-MLB72112672143_102023-O.webp" alt="Camiseta 3">
                 <p>Preço: R$ 49,90</p>
-                <details>
-                    <summary>Detalhes</summary>
-                    <p>doe sangue, camiseta feita com malha que veio da europa</p>
-                    <a href="detalhes.html" class="btn-vermelho" role="button">Saiba</a>
-                </details>
+                <button class="btn-vermelho">
+                    <a href="contato.html" style="color: white; text-decoration: none;">Comprar</a>
+                </button>
             </div>
         </div>
     </main>
-
     <footer>
         <p>Desenvolvimento de Sistemas UC7-2025</p>
     </footer>
+    <script src="junho.js"></script>
 </body>
 </html>
-

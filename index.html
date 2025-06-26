@@ -419,12 +419,36 @@ main img {
         .form-cadastro button.btn-vermelho:hover {
             background-color: #b71c1c;
         }
+         body {
+      background-color: white;
+      color: black;
+      transition: 0.3s;
+    }
+
+    .darkmode {
+      background-color: #121212;
+      color: white;
+    }
+
+    #toogglebtn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: white;
+      cursor: pointer;
+    }
 </style>
   
 </head>
 <body>
     <header>
         <h1>Junho Vermelho</h1>
+        <button id="toogglebtn">apaga &lt;3</button>
+
     </header>
     <nav>
         <ul class="menu">
@@ -452,5 +476,7 @@ main img {
     <footer>
         <p>Desenvolvimento de Sistemas UC7-2025</p>
     </footer>
+
+    <script src="junho.js"></script>
 </body>
 </html>
