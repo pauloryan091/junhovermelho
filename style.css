@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Detalhes das Camisetas - Junho Vermelho</title>
-<style>
-      /* Estilo global */
+   /* Estilo global */
 * {
     margin: 0; /* Remove a margem padrão de todos os elementos */
     padding: 0; /* Remove o preenchimento padrão de todos os elementos */
@@ -277,60 +270,3 @@ main h2 {
         font-size: 14px;
     }
 }
-
-</style>
-</head>
-<body>
-<header>
-    <h1>Junho Vermelho</h1>
-</header>
-<nav>
-    <ul class="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="produtos.html">Produtos</a></li>
-        <li><a href="servicos.html">Serviços</a></li>
-        <li><a href="contato.html">Contato</a></li>
-    </ul>
-</nav>
-<main>
-    <section class="camiseta" id="camiseta1">
-        <img src="OIP.jpg" alt="Camiseta 1" />
-        <div class="detalhes">
-            <h2>Camiseta doe sangue</h2>
-            <p><strong>Preço:</strong> R$ 49,90</p>
-            <p><strong>Material:</strong> Algodão 100%, tecido leve e respirável.</p>
-            <p><strong>Descrição:</strong> Camiseta confortável e estilosa, perfeita para o dia a dia, com a temática Junho Vermelho que valoriza a doação de sangue.</p>
-            <p><strong>Tamanhos disponíveis:</strong> P, M, G, GG</p>
-            
-        </div>
-    </section>
-    <section class="camiseta" id="camiseta2">
-        <img src="D_NQ_NP_705614-MLB74252083446_022024-O.webp" alt="Camiseta 2" />
-        <div class="detalhes">
-            <h2>Camiseta doe vida 2</h2>
-            <p><strong>Preço:</strong> R$ 49,90</p>
-            <p><strong>Material:</strong> Mistura de algodão e poliéster que garante durabilidade e conforto.</p>
-            <p><strong>Descrição:</strong> Design moderno com cores vibrantes que destacam a campanha Junho Vermelho.</p>
-            <p><strong>Tamanhos disponíveis:</strong> P, M, G, GG, XGG</p>
-            
-        </div>
-    </section>
-    <section class="camiseta" id="camiseta3">
-        <img src="D_NQ_NP_840476-MLB72112672143_102023-O.webp" alt="Camiseta 3" />
-        <div class="detalhes">
-            <h2>Camiseta doe vida</h2>
-            <p><strong>Preço:</strong> R$ 49,90</p>
-            <p><strong>Material:</strong> 100% Algodão orgânico, sustentável e macio.</p>
-            <p><strong>Descrição:</strong> Camiseta ecológica com estampa exclusiva da campanha Junho Vermelho, contribuindo para o meio ambiente.</p>
-            <p><strong>Tamanhos disponíveis:</strong> P, M, G, GG</p>
-       
-        </div>
-    </section>
-</main>
-<footer>
-    <p>Desenvolvimento de Sistemas UC7-2025</p>
-</footer>
-</body>
-</html>
-
