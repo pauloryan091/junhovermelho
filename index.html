@@ -4,292 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Junho Vermelho - Home</title>
-    <style>
-   /* Estilo global */
-* {
-    margin: 0; /* Remove a margem padrão de todos os elementos */
-    padding: 0; /* Remove o preenchimento padrão de todos os elementos */
-    box-sizing: border-box; /* Inclui o preenchimento e a borda no cálculo da largura e altura dos elementos */
-}
-
-body {
-    font-family: Arial, sans-serif; /* Define a fonte padrão do corpo */
-    background-color: #fff5f5; /* Define a cor de fundo do corpo */
-    color: #333; /* Define a cor do texto padrão */
-}
-
-/* Cabeçalho */
-header {
-    background-color: #d32f2f; /* Define a cor de fundo do cabeçalho */
-    color: white; /* Define a cor do texto do cabeçalho */
-    padding: 20px; /* Adiciona preenchimento ao cabeçalho */
-    text-align: center; /* Centraliza o texto no cabeçalho */
-}
-
-/* Menu de navegação */
-nav {
-    background-color: #b71c1c; /* Define a cor de fundo do menu de navegação */
-}
-
-.menu {
-    display: flex; /* Usa flexbox para organizar os itens do menu em linha */
-    justify-content: center; /* Centraliza os itens do menu horizontalmente */
-    list-style: none; /* Remove os marcadores da lista */
-    padding: 10px 0; /* Adiciona preenchimento vertical ao menu */
-}
-
-.menu li {
-    margin: 0 15px; /* Adiciona margem horizontal entre os itens do menu */
-}
-
-.menu a {
-    color: white; /* Define a cor do texto dos links do menu */
-    text-decoration: none; /* Remove o sublinhado dos links */
-    padding: 10px 15px; /* Adiciona preenchimento aos links */
-    transition: background-color 0.3s; /* Adiciona uma transição suave para a cor de fundo */
-}
-
-.menu a:hover {
-    background-color: #880e4f; /* Muda a cor de fundo dos links ao passar o mouse */
-}
-
-/* Conteúdo principal */
-main {
-    padding: 20px; /* Adiciona preenchimento ao conteúdo principal */
-    text-align: center; /* Centraliza o texto no conteúdo principal */
-}
-
-main img {
-    max-width: 100%; /* Garante que as imagens não excedam a largura do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-    margin: 20px 0; /* Adiciona margem vertical às imagens */
-}
-
-/* Rodapé */
-footer {
-    background-color: #d32f2f; /* Define a cor de fundo do rodapé */
-    color: white; /* Define a cor do texto do rodapé */
-    text-align: center; /* Centraliza o texto no rodapé */
-    padding: 10px; /* Adiciona preenchimento ao rodapé */
-    position: relative; /* Define a posição do rodapé como relativa */
-    bottom: 0; /* Posiciona o rodapé na parte inferior do contêiner */
-    width: 100%; /* Define a largura do rodapé como 100% do contêiner pai */
-}
-
-/* Estilo para produtos */
-.produtos {
-    display: flex; /* Usa flexbox para organizar os produtos em linha */
-    justify-content: space-around; /* Distribui os produtos uniformemente */
-    margin-top: 20px; /* Adiciona margem superior aos produtos */
-}
-
-.produto {
-    text-align: center; /* Centraliza o texto dentro de cada produto */
-}
-
-.produto img {
-    max-width: 100%; /* Garante que as imagens dos produtos não excedam a largura do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 50%; /* Aplica bordas arredondadas às imagens dos produtos */
-}
-
-/* Estilo para botões vermelhos */
-.btn-vermelho {
-    text-decoration: none; /* Remove o sublinhado do botão */
-    background-color: #d32f2f; /* Define a cor de fundo do botão */
-    color: white; /* Define a cor do texto do botão */
-    border: none; /* Remove a borda do botão */
-    padding: 10px 20px; /* Adiciona preenchimento ao botão */
-    font-size: 16px; /* Define o tamanho da fonte do botão */
-    border-radius: 8px; /* Aplica bordas arredondadas ao botão */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    transition: background-color 0.3s ease; /* Adiciona uma transição suave para a cor de fundo */
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Define a fonte do botão */
-}
-
-.btn-vermelho:hover {
-    background-color: #b71c1c; /* Muda a cor de fundo do botão ao passar o mouse */
-}
-
-/* Estilo para formulários de cadastro */
-.form-cadastro {
-    max-width: 500px; /* Define a largura máxima do formulário */
-    margin: 20px auto; /* Centraliza o formulário horizontalmente e adiciona margem vertical */
-    text-align: left; /* Alinha o texto do formulário à esquerda */
-    background-color: #ffeaea; /* Define a cor de fundo do formulário */
-    padding: 20px; /* Adiciona preenchimento ao formulário */
-    border-radius: 10px; /* Aplica bordas arredondadas ao formulário */
-}
-
-.form-cadastro input,
-.form-cadastro textarea {
-    width: 100%; /* Define a largura dos campos de entrada como 100% do contêiner */
-    padding: 10px; /* Adiciona preenchimento aos campos de entrada */
-    margin-top: 5px; /* Adiciona margem superior aos campos de entrada */
-    border: 1px solid #ccc; /* Define a borda dos campos de entrada */
-    border-radius: 5px; /* Aplica bordas arredondadas aos campos de entrada */
-    font-family: inherit; /* Herda a fonte do elemento pai */
-}
-
-.form-cadastro label {
-    font-weight: bold; /* Define o texto do rótulo como negrito */
-    color: #b71c1c; /* Define a cor do texto do rótulo */
-}
-
-.form-cadastro button {
-    margin-top: 10px; /* Adiciona margem superior ao botão do formulário */
-}
-
-/* Estilo para seções de serviços */
-main h2 {
-    font-size: 2rem; /* Define o tamanho da fonte dos títulos */
-    font-weight: bold; /* Define o texto dos títulos como negrito */
-    color: #d32f2f; /* Define a cor do texto dos títulos */
-    margin-bottom: 20px; /* Adiciona margem inferior aos títulos */
-}
-
-/* Estilo para contêiner de serviços */
-.services-container {
-    display: flex; /* Usa flexbox para organizar os serviços em linha */
-    flex-wrap: wrap; /* Permite que os serviços se movam para a próxima linha se não houver espaço */
-    justify-content: center; /* Centraliza os serviços horizontalmente */
-    gap: 20px; /* Adiciona espaço entre os serviços */
-    margin-top: 20px; /* Adiciona margem superior ao contêiner de serviços */
-}
-
-/* Estilo para cartões de serviços */
-.service-card {
-    background: #fff; /* Define a cor de fundo do cartão de serviço */
-    border-radius: 10px; /* Aplica bordas arredondadas ao cartão de serviço */
-    padding: 20px; /* Adiciona preenchimento ao cartão de serviço */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao cartão de serviço */
-    width: 250px; /* Define a largura do cartão de serviço */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adiciona transições suaves para transformações e sombras */
-    text-align: center; /* Centraliza o texto dentro do cartão de serviço */
-}
-
-.service-card:hover {
-    transform: translateY(-5px); /* Move o cartão para cima ao passar o mouse */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
-}
-
-/* Estilo para ícones de serviços */
-.service-icon {
-    font-size: 3rem; /* Define o tamanho da fonte do ícone de serviço */
-    color: #d32f2f; /* Define a cor do ícone de serviço */
-    margin-bottom: 10px; /* Adiciona margem inferior ao ícone de serviço */
-}
-
-/* Estilo para títulos de serviços */
-.service-title {
-    font-size: 1.5rem; /* Define o tamanho da fonte do título do serviço */
-    font-weight: bold; /* Define o texto do título do serviço como negrito */
-    color: #b71c1c; /* Define a cor do texto do título do serviço */
-    margin-bottom: 10px; /* Adiciona margem inferior ao título do serviço */
-}
-
-/* Estilo para descrições de serviços */
-.service-description {
-    font-size: 1rem; /* Define o tamanho da fonte da descrição do serviço */
-    color: #333; /* Define a cor do texto da descrição do serviço */
-}
-
-/* Estilo para a seção de contato */
-.form-cadastro button.btn-vermelho {
-    width: 100%; /* Define a largura do botão como 100% do contêiner */
-    background-color: #d32f2f; /* Define a cor de fundo do botão */
-    color: white; /* Define a cor do texto do botão */
-    border: none; /* Remove a borda do botão */
-    padding: 10px; /* Adiciona preenchimento ao botão */
-    font-size: 16px; /* Define o tamanho da fonte do botão */
-    border-radius: 8px; /* Aplica bordas arredondadas ao botão */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    transition: background-color 0.3s ease; /* Adiciona uma transição suave para a cor de fundo */
-}
-
-.form-cadastro button.btn-vermelho:hover {
-    background-color: #b71c1c; /* Muda a cor de fundo do botão ao passar o mouse */
-}
-
-/* Responsivo para tablets (largura máxima de 768px) */
-@media (max-width: 768px) {
-    .menu {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .produtos,
-    .services-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .produto {
-        margin-bottom: 20px;
-    }
-
-    .form-cadastro {
-        margin: 20px 10px;
-        padding: 15px;
-    }
-
-    .service-card {
-        width: 90%;
-    }
-}
-
-/* Responsivo para celulares (largura máxima de 480px) */
-@media (max-width: 480px) {
-    header,
-    footer {
-        padding: 15px;
-    }
-
-    .menu a {
-        display: block;
-        margin: 10px 0;
-        padding: 10px;
-    }
-
-    main h2 {
-        font-size: 1.5rem;
-    }
-
-    .service-icon {
-        font-size: 2rem;
-    }
-
-    .service-title {
-        font-size: 1.2rem;
-    }
-
-    .service-description {
-        font-size: 0.95rem;
-    }
-
-    .btn-vermelho {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-
-    .form-cadastro input,
-    .form-cadastro textarea {
-        font-size: 14px;
-    }
-}
-
-
-</style>
+    <link rel="stylesheet" href="style.css">
   
 </head>
 <body>
     <header>
         <h1>Junho Vermelho</h1>
-        <button id="toggleBtn">Color</button>
+        
     </header>
 
     <nav>
-        <ul class="menu">
+        <button id="menuBtn" aria-label="Toggle menu">☰</button>
+        <ul id="menu" class="menu" aria-hidden="true">
             <li><a href="index.html" aria-current="page">Home</a></li>
             <li><a href="sobre.html">Sobre</a></li>
             <li><a href="produtos.html">Produtos</a></li>
@@ -298,41 +24,34 @@ main h2 {
         </ul>
     </nav>
     <main>
-       
         <h2>Bem-vindo à Campanha Junho Vermelho!</h2>
-        <img src="OIP (7).jpg" alt="Campanha Junho Vermelho">
+        <img src="OIP (7).jpg" alt="Imagem representativa da Campanha Junho Vermelho">
         <p class="welcome-message">Participe da campanha e ajude a salvar vidas!</p>
 
-        <div class="benefits">
+        <section class="benefits">
             <h3>Por que doar sangue?</h3>
             <p>🩸 Ajuda em emergências: Pacientes vítimas de acidentes.</p>
             <p>🩸 Doar é um ato de cidadania e solidariedade.</p>
             <p>🩸 Doação é segura e rápida.</p>
             <p>🩸 O sangue não pode ser fabricado.</p>
             <p>🩸 Você cuida de sua saúde também.</p>
-        </div>
+        </section>
     </main>
     <footer>
         <p>Desenvolvimento de Sistemas UC7-2025</p>
     </footer>
     <script>
-            const button = document.getElementById('toggleBtn')
-        const body = document.body;
+        const btn = document.getElementById('menuBtn');
+        const menu = document.querySelector('.menu');
+        let menuAberto = false;
 
-       button.addEventListener('click', () => {
-            body.classList.toggle('dark-mode')
-
-        
-if(body.classList.contains('dark-mode')) {
-    button.textContent = 'acende <3';
-
-} else{
-    button.textContent = 'apaga <3';
-}
-
-});
-
-
+        btn.addEventListener('click', () => {
+            if (window.innerWidth <= 600 && menu) {
+                menu.style.display = menuAberto ? 'none' : 'flex';
+                menuAberto = !menuAberto;
+                menu.setAttribute('aria-hidden', !menuAberto);
+            }
+        });
     </script>
 </body>
 </html>
