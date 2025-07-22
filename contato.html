@@ -24,7 +24,6 @@
 
     <main>
         <h2>Contato</h2>
-        <img src="OIP (1).jpg" alt="Contato">
         <h3>Cadastre-se para receber Descontos das Camisetas e Saber mais das Camisetas:</h3>
         <form class="form-cadastro" action="#" method="post">
             <label for="nome">Nome:</label>
@@ -38,6 +37,20 @@
 
             <button type="submit" class="btn-vermelho">Enviar</button>
         </form>
+           <section class="momentos">
+   <div class="carousel">
+    <!-- Imagem padrão (desktop) -->
+    <img src="slide1.jpg" alt="Imagem desktop" class="desktop-only">
+    <img src="slide2.jpg" alt="Imagem desktop" class="desktop-only">
+    <!-- Imagem alternativa (mobile) -->
+    <img src="mobile.webp" alt="Imagem mobile" class="mobile-only">
+    <!-- Outras imagens do carrossel -->
+    <img src="mobile.webp" alt="Outro slide">
+    <img src="mobile.webp" alt="Outro slide">
+  </div>
+
+</section>
+
     </main>
     <footer>
         <p>Desenvolvimento de Sistemas UC7-2025</p>
@@ -53,6 +66,20 @@ btn.addEventListener('click', () => {
     menuAberto = !menuAberto;
   }
 });
+
+  // Carrossel automático
+const carousel = document.querySelector('.carousel');
+const images = carousel.querySelectorAll('img');
+let currentIndex = 0;
+
+setInterval(() => {
+    currentIndex = (currentIndex + 1) % images.length;
+    const offset = -currentIndex * 100;
+    images.forEach(img => {
+        img.style.transform = `translateX(${offset}%)`;
+    });
+}, 3000); // muda a imagem a cada 3 segundos
+
     </script>
 </body>
 </html>

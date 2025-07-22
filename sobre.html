@@ -23,7 +23,7 @@
     </nav>
     <main>
         <h2>Sobre a Campanha Junho Vermelho</h2>
-        <img src="OIP (8).jpg" alt="Sobre a Campanha">
+        <img src="OIP.webp" alt="Sobre a Campanha">
         <p class="description">A campanha Junho Vermelho visa conscientizar a população sobre a importância da doação de sangue.</p>
 
         <div class="goals">
@@ -35,6 +35,22 @@
                 <li>Engajar a comunidade em ações de solidariedade.</li>
             </ul>
         </div>
+        <section class="momentos">
+    <section class="momentos">
+  
+  <div class="carousel">
+    <!-- Imagem padrão (desktop) -->
+    <img src="slide1.jpg" alt="Imagem desktop" class="desktop-only">
+    <img src="slide2.jpg" alt="Imagem desktop" class="desktop-only">
+    <!-- Imagem alternativa (mobile) -->
+    <img src="mobile.webp" alt="Imagem mobile" class="mobile-only">
+    <!-- Outras imagens do carrossel -->
+    <img src="mobile.webp" alt="Outro slide">
+    <img src="mobile.webp" alt="Outro slide">
+  </div>
+</section>
+
+</section>
     </main>
     <footer>
         <p>Desenvolvimento de Sistemas UC7-2025</p>
@@ -50,6 +66,20 @@ btn.addEventListener('click', () => {
     menuAberto = !menuAberto;
   }
 });
+
+  // Carrossel automático
+const carousel = document.querySelector('.carousel');
+const images = carousel.querySelectorAll('img');
+let currentIndex = 0;
+
+setInterval(() => {
+    currentIndex = (currentIndex + 1) % images.length;
+    const offset = -currentIndex * 100;
+    images.forEach(img => {
+        img.style.transform = `translateX(${offset}%)`;
+    });
+}, 3000); // muda a imagem a cada 3 segundos
+
     </script>
 </body>
 </html>

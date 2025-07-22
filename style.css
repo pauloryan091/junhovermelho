@@ -334,3 +334,147 @@
                 display: none; /* Oculta o botão de menu */
             }
         }
+
+/* Garantir que a página use flex para empurrar o rodapé para o final */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* O conteúdo principal cresce para empurrar o rodapé */
+main {
+    flex: 1;
+}
+
+/* Rodapé fixado no final da página */
+footer {
+    background-color: #d32f2f;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+/* Faz o body ocupar toda a altura da tela */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Faz o main crescer para empurrar o footer para baixo */
+main {
+    flex: 1;
+}
+
+/* Rodapé normal */
+footer {
+    background-color: #d32f2f;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+/* Estilo padrão para as imagens */
+.camiseta img {
+    width: 100%;
+    max-width: 300px; /* controla o tamanho máximo */
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Em telas maiores, deixar a imagem menor */
+@media (min-width: 769px) {
+    .camiseta img {
+        max-width: 220px;
+    }
+}
+
+
+/* Menu padrão (desktop) */
+.menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 10px 0;
+}
+
+/* Oculta menu e mostra botão no celular */
+@media (max-width: 600px) {
+  .menu {
+    display: none; /* Oculta inicialmente */
+    flex-direction: column;
+    background-color: #b71c1c;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu.menu-ativo {
+    display: flex; /* Exibe quando ativado pelo botão */
+  }
+
+  #menuBtn {
+    display: block;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  nav {
+    text-align: center;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+}
+
+/* Oculta o botão de menu em telas maiores */
+@media (min-width: 601px) {
+  #menuBtn {
+    display: none;
+  }
+}
+.carousel {
+    display: flex;
+    overflow: hidden;
+    max-width: 100%;
+    height: 250px;
+    position: relative;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.carousel img {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+    object-fit: cover;
+}
+
+
+/* Por padrão, imagem mobile escondida */
+.mobile-only {
+  display: none;
+}
+
+/* Imagem desktop visível */
+.desktop-only {
+  display: block;
+}
+
+/* Quando for mobile, esconde desktop e mostra mobile */
+@media (max-width: 600px) {
+  .desktop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+  }
+}

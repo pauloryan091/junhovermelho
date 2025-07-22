@@ -5,73 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Produtos - Junho Vermelho</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
     <header>
         <h1>Junho Vermelho</h1>
     </header>
+
     <nav>
-         <button id="menuBtn" aria-label="Toggle menu">☰</button>
-        <ul id="menu" class="menu" aria-hidden="true">
-            <li><a href="index.html" aria-current="page">Home</a></li>
+        <button id="menuBtn" aria-label="Abrir menu">☰</button>
+        <ul id="menu" class="menu">
+            <li><a href="index.html">Home</a></li>
             <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="produtos.html" aria-current="page">Produtos</a></li>
             <li><a href="servicos.html">Serviços</a></li>
             <li><a href="contato.html">Contato</a></li>
         </ul>
     </nav>
- 
+
     <main>
         <h2>Camisetas</h2>
-        <div class="produtos">
-            <div class="produto">
-                <img src="OIP.jpg" alt="Camiseta 1" />
-                <p>Preço: R$ 49,90</p>
-                <details>
-                    <summary>Detalhes</summary>
-                    <p>camiseta doe sangue, com tamanhos para todos e malha fria</p>
-                    <a href="detalhes.html" class="btn-vermelho" role="button">Saiba</a>
-                </details>
-            </div>
-
-            <div class="produto">
-                <img src="D_NQ_NP_705614-MLB74252083446_022024-O.webp" alt="Camiseta 2" />
-                <p>Preço: R$ 49,90</p>
-                <details>
-                    <summary>Detalhes</summary>
-                    <p>doe vida, camiseta que veio da china, sem covid-19</p>
-                    <a href="detalhes.html" class="btn-vermelho" role="button">Saiba</a>
-                </details>
-            </div>
-
-            <div class="produto">
-                <img src="D_NQ_NP_840476-MLB72112672143_102023-O.webp" alt="Camiseta 3" />
-                <p>Preço: R$ 49,90</p>
-                <details>
-                    <summary>Detalhes</summary>
-                    <p>doe sangue, camiseta feita com malha que veio da europa</p>
-                    <a href="detalhes.html" class="btn-vermelho" role="button">Saiba</a>
-                </details>
-            </div>
+    <div class="produtos">
+        <div class="produto">
+            <img src="Design-sem-nome-7-1024x1024.jpg" alt="Camiseta Salve Vidas - Design com mensagem de doação" />
+            <a href="detalhes.html" class="btn-vermelho" role="button">Saiba mais</a>
         </div>
+       <div class="produto">
+            <img src="Design-sem-nome-7-1024x1024.jpg" alt="Camiseta Salve Vidas - Design com mensagem de doação" />
+            <a href="detalhes.html" class="btn-vermelho" role="button">Saiba mais</a>
+        </div>
+        <div class="produto">
+            <img src="Design-sem-nome-7-1024x1024.jpg" alt="Camiseta Salve Vidas - Design com mensagem de doação" />
+            <a href="detalhes.html" class="btn-vermelho" role="button">Saiba mais</a>
+        </div>
+         <div class="produto">
+            <img src="Design-sem-nome-7-1024x1024.jpg" alt="Camiseta Salve Vidas - Design com mensagem de doação" />
+            <a href="detalhes.html" class="btn-vermelho" role="button">Saiba mais</a>
+        </div>
+    </div>
     </main>
 
     <footer>
-        <p>Desenvolvimento de Sistemas UC7-2025</p>
+        <p>Desenvolvimento de Sistemas UC7 - 2025</p>
     </footer>
-        <script>
-        const btn = document.getElementById('menuBtn');
-const menu = document.getElementById('menu');
-let menuAberto = false;
 
-btn.addEventListener('click', () => {
-  if (window.innerWidth <= 600) {
-    menu.style.display = menuAberto ? 'none' : 'flex';
-    menuAberto = !menuAberto;
-  }
-});
+    <script>
+        const btn = document.getElementById('menuBtn');
+        const menu = document.getElementById('menu');
+        let menuAberto = false;
+
+        btn.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                menu.classList.toggle('menu-ativo');
+                menuAberto = !menuAberto;
+            }
+        });
     </script>
 </body>
 </html>
-

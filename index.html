@@ -5,27 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Junho Vermelho - Home</title>
     <link rel="stylesheet" href="style.css">
-  
 </head>
 <body>
     <header>
         <h1>Junho Vermelho</h1>
-        
     </header>
 
     <nav>
-        <button id="menuBtn" aria-label="Toggle menu">☰</button>
+        <button id="menuBtn" aria-label="Abrir menu">☰</button>
         <ul id="menu" class="menu" aria-hidden="true">
-            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="sobre.html">Sobre</a></li>
             <li><a href="produtos.html">Produtos</a></li>
             <li><a href="servicos.html">Serviços</a></li>
             <li><a href="contato.html">Contato</a></li>
         </ul>
     </nav>
+
     <main>
         <h2>Bem-vindo à Campanha Junho Vermelho!</h2>
-        <img src="OIP (7).jpg" alt="Imagem representativa da Campanha Junho Vermelho">
+        <img src="OIP.webp" alt="Imagem representativa da Campanha Junho Vermelho">
         <p class="welcome-message">Participe da campanha e ajude a salvar vidas!</p>
 
         <section class="benefits">
@@ -36,10 +35,47 @@
             <p>🩸 O sangue não pode ser fabricado.</p>
             <p>🩸 Você cuida de sua saúde também.</p>
         </section>
+
+       <section class="momentos">
+   <div class="carousel">
+    <!-- Imagem padrão (desktop) -->
+    <img src="slide1.jpg" alt="Imagem desktop" class="desktop-only">
+    <img src="slide2.jpg" alt="Imagem desktop" class="desktop-only">
+    <!-- Imagem alternativa (mobile) -->
+    <img src="mobile.webp" alt="Imagem mobile" class="mobile-only">
+    <!-- Outras imagens do carrossel -->
+    <img src="mobile.webp" alt="Outro slide">
+    <img src="mobile.webp" alt="Outro slide">
+  </div>
+
+</section>
+
+
+        <section class="duvidas">
+            <h3>Dúvidas Frequentes</h3>
+            <details>
+                <summary>Quem pode doar sangue?</summary>
+                <p>Pessoas entre 16 e 69 anos, com mais de 50kg e em boas condições de saúde.</p>
+            </details>
+            <details>
+                <summary>É necessário estar em jejum?</summary>
+                <p>Não. Recomenda-se fazer uma refeição leve e evitar alimentos gordurosos antes da doação.</p>
+            </details>
+            <details>
+                <summary>Quanto tempo dura a doação?</summary>
+                <p>O processo leva cerca de 40 minutos, incluindo o cadastro e a triagem.</p>
+            </details>
+            <details>
+                <summary>Com que frequência posso doar?</summary>
+                <p>Homens podem doar a cada 2 meses (máx. 4 vezes/ano) e mulheres a cada 3 meses (máx. 3 vezes/ano).</p>
+            </details>
+        </section>
     </main>
+
     <footer>
         <p>Desenvolvimento de Sistemas UC7-2025</p>
     </footer>
+
     <script>
         const btn = document.getElementById('menuBtn');
         const menu = document.querySelector('.menu');
@@ -52,6 +88,20 @@
                 menu.setAttribute('aria-hidden', !menuAberto);
             }
         });
+
+        // Carrossel automático
+const carousel = document.querySelector('.carousel');
+const images = carousel.querySelectorAll('img');
+let currentIndex = 0;
+
+setInterval(() => {
+    currentIndex = (currentIndex + 1) % images.length;
+    const offset = -currentIndex * 100;
+    images.forEach(img => {
+        img.style.transform = `translateX(${offset}%)`;
+    });
+}, 3000); // muda a imagem a cada 3 segundos
+
     </script>
 </body>
 </html>
