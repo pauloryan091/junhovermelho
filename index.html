@@ -9,6 +9,8 @@
 <body>
     <header>
         <h1>Junho Vermelho</h1>
+        <button id="toggle-theme">🌙</button>
+
     </header>
 
     <nav>
@@ -39,13 +41,13 @@
        <section class="momentos">
    <div class="carousel">
     <!-- Imagem padrão (desktop) -->
-    <img src="slide1.jpg" alt="Imagem desktop" class="desktop-only">
-    <img src="slide2.jpg" alt="Imagem desktop" class="desktop-only">
+    <img src="fundo.webp" alt="Imagem desktop" class="desktop-only">
+    <img src="fundo.webp" alt="Imagem desktop" class="desktop-only">
     <!-- Imagem alternativa (mobile) -->
-    <img src="mobile.webp" alt="Imagem mobile" class="mobile-only">
+    <img src="fundo.webp" alt="Imagem mobile" class="mobile-only">
     <!-- Outras imagens do carrossel -->
-    <img src="mobile.webp" alt="Outro slide">
-    <img src="mobile.webp" alt="Outro slide">
+    <img src="fundo.webp" alt="Outro slide">
+    <img src="fundo.webp" alt="Outro slide">
   </div>
 
 </section>
@@ -101,6 +103,10 @@ setInterval(() => {
         img.style.transform = `translateX(${offset}%)`;
     });
 }, 3000); // muda a imagem a cada 3 segundos
+const toggleBtn = document.getElementById('toggle-theme');
+toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+});
 
     </script>
 </body>
